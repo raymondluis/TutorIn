@@ -4,6 +4,7 @@ class User:
     name = None
     _email = None
     _userRole = None
+    message = None
 
     def __init__(self,username,password,name,email,userRole):
         self.username = username
@@ -11,29 +12,28 @@ class User:
         self.name = name
         self._email = email
         self._userRole = userRole
-    def login(username,password):
+        self.message = None
+    def login(self, username,password):
         # check if credentials is 
         return True
 
-    def verifyAccount():
+    def verifyAccount(self):
         return True
 
-    def forgetPassword():
+    def forgetPassword(self):
         return True
 
-    def changePassword():
+    def changePassword(self):
         return True
 
 class Admin(User):
-    
-    
-    def verifyUser():
+    def verifyUser(self):
         return True
 
-    def solveThreadProblem():
+    def solveThreadProblem(self):
         return True
     
-    def verifyPayment():
+    def verifyPayment(self):
         return True
 
 class Siswa(User):
@@ -42,21 +42,21 @@ class Siswa(User):
     _nomorHp = None
     _identificationCard = None
 
-    def createAccount(self,siswaId,angkata,nomorHp,identificationCard):
+    def createAccount(self,siswaId,angkatan,nomorHp,identificationCard):
         self._siswaId = siswaId
         self.angkatan = angkatan
         self._nomorHp = nomorHp
         self._identificationCard = identificationCard
 
-    def bookTutor():
+    def bookTutor(self):
         return True
     
-    def checkOut():
+    def checkOut(self):
         return True
 
-    def sendMessage():
+    def sendMessage(self):
         message = chatMessage('test','test','test','test')
-        message.sendMessage(message)    
+        self.message.sendMessage(message)    
 
 class Tutor(User):
     _tutorId = None
@@ -72,15 +72,15 @@ class Tutor(User):
         self._identificationCard = identificationCard
         self.rating = rating
     
-    def manageRequest():
+    def manageRequest(self):
         return True
     
-    def sendMessage():
+    def sendMessage(self):
         message = chatMessage('test','test','test','test')
-        message.sendMessage(message)
+        self.message.sendMessage(message)
 
 
-class chatMessage:
+class chatMessage(User):
     _senderName = None
     _receiveName = None
     _datetime = None
@@ -92,11 +92,11 @@ class chatMessage:
         self._datetime = datetime
         self._chatHistory = chatHistory
 
-    def seeMessage():
+    def seeMessage(self):
         return True
     
-    def sendMessage(message):
-        return message
+    def sendMessage(self):
+        return self.message
 
 class tutoringSession:
     _sessionId = None
@@ -112,10 +112,10 @@ class tutoringSession:
         self._tutoringPeriod = tutoringPeriod
         self._paymentStatus = paymentStatus
 
-    def bookSchedule(date):
+    def bookSchedule(self, date):
         return True
     
-    def tutoringSession():
+    def tutoringSession(self):
         return True
 
 class Payment(tutoringSession):
@@ -123,10 +123,10 @@ class Payment(tutoringSession):
     _payerName = None
     _paymentId = None
 
-    def checkOut():
+    def checkOut(self):
         return True
 
-    def verifiedBilling():
+    def verifiedBilling(self):
         return True
 
 # nunggu relasi dari tutor ama siswa
@@ -142,23 +142,22 @@ class Thread:
         self.threadHeader = threadHeader
         self.senderName = senderName
     
-    def replyThread():
+    def replyThread(self):
         return True
-    def replyThread():
-        return True
-    def removeThread():
+
+    def removeThread(self):
         return True
 
 class Post:
     _threadId = None
     text = None
 
-    def writePost():
+    def writePost(self):
         return True
 
-    def seePost():
+    def seePost(self):
         return True
     
-    def deletePost():
+    def deletePost(self):
         return True
         

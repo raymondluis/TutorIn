@@ -200,7 +200,17 @@ form .btn input[type="submit"]{
   font-weight: 500;
   cursor: pointer;
 }
-
+footer {
+    background-color: #198492;
+    padding: 1.6rem 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  footer p {
+    color: #fff;
+  }
+  
 
 footer{
 	position: relative;

@@ -443,7 +443,6 @@ form:hover .fa{
   border-bottom: 4px solid #fff;
   background-color: #198492;
   color: #fff;
-  border: white;
 }
 .team:hover p {
   color: #fff;
@@ -452,28 +451,16 @@ form:hover .fa{
   border-color: #fff;
 }
 
-/* forum */
-.forum {
-  color: #198492;
-  background-color: #fff(195, 223, 236);
-  padding: 3rem;
-  text-align: center;
-  border-radius: 1rem;
-  border-bottom: 4px solid transparent;
-  transition: all 300ms ease-in-out;
+.contatu{
+  width: 90%;
+  margin-left: 5%;
+  display: block;
 }
-.forum .quest {
-  border: 2px solid #198492;
-  border-radius: 1rem;
-  box-shadow: 2px lightgray;
-  text-align: left;
-  background: #fff;
-  padding: 10px;
-  font-size: 1.6rem;
-  margin: 1rem 0;
-}
-.fa .fa-trash-o{
-  
+.tutorS{
+  width: 30%;
+  margin-right: 3.33%;
+  float: left;
+  margin-bottom: 3.33%;
 }
 
 /* footer */
